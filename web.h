@@ -12,6 +12,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include "stringbuilder.h"
+#include "strfuncs.h"
 
 #define BACKLOG 5
 #define MAXHEADERS 30

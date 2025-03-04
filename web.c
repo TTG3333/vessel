@@ -1,14 +1,6 @@
 #include "web.h"
 
-int str_start(const char *haystack, const char *needle) {
-    return ! strncmp(haystack, needle, strlen(needle));
-}
-
-int str_end(const char *haystack, const char *needle) {
-    return ! strcmp(needle, haystack + strlen(haystack) - strlen(needle));
-}
-
-char *build_header(response *rsp) { // the return value is a boolean indicating success
+char *build_header(response *rsp) {
     sb dest;
     if (! sb_init(BUFLEN, &dest)) {
         return NULL;
